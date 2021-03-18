@@ -3,8 +3,16 @@
   "version": "0.1.1",
   "description": "A NestJs Wrapper for shopify-api-node",
   "author": "Edward Stephenson",
-  "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edstevo/nestjs-shopify"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "shopify"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
