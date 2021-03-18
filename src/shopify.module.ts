@@ -1,14 +1,14 @@
 import { DynamicModule, Module } from '@nestjs/common';
 import { ShopifyModuleAsyncOptions, ShopifyModuleOptions } from './interfaces';
-import { ShopifyCoreModule } from './shopify.core.module';
+import { NestJsShopifyCoreModule } from './shopify.core.module';
 
 @Module({})
 export class NestJsShopifyModule {
   public static register(options: ShopifyModuleOptions): DynamicModule {
     return {
       module: NestJsShopifyModule,
-      imports: [ShopifyCoreModule.register(options)],
-      exports: [ShopifyCoreModule],
+      imports: [NestJsShopifyCoreModule.register(options)],
+      exports: [NestJsShopifyCoreModule],
     };
   }
 
@@ -17,8 +17,8 @@ export class NestJsShopifyModule {
   ): DynamicModule {
     return {
       module: NestJsShopifyModule,
-      imports: [ShopifyCoreModule.registerAsync(options)],
-      exports: [ShopifyCoreModule],
+      imports: [NestJsShopifyCoreModule.registerAsync(options)],
+      exports: [NestJsShopifyCoreModule],
     };
   }
 }

@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication, Injectable } from '@nestjs/common';
-import { ShopifyModule } from 'src/shopify.module';
+import { NestJsShopifyModule } from 'src/shopify.module';
 import {
   ShopifyModuleOptions,
   ShopifyModuleOptionsFactory,
@@ -29,7 +29,7 @@ describe('ShopifyModule', () => {
   describe('#register', () => {
     beforeEach(async () => {
       const moduleFixture: TestingModule = await Test.createTestingModule({
-        imports: [ShopifyModule.register(options)],
+        imports: [NestJsShopifyModule.register(options)],
       }).compile();
 
       app = moduleFixture.createNestApplication();
@@ -51,7 +51,7 @@ describe('ShopifyModule', () => {
     beforeEach(async () => {
       const moduleFixture: TestingModule = await Test.createTestingModule({
         imports: [
-          ShopifyModule.registerAsync({
+          NestJsShopifyModule.registerAsync({
             useClass: ShopifyModuleConfigService,
           }),
         ],
