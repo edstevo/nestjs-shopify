@@ -14,7 +14,7 @@ A NestJs Wrapper for shopify-api-node
 ## Installation
 
 ```bash
-$ npm install
+$ npm i nestjs-shopify --save
 ```
 
 ## Running the app
