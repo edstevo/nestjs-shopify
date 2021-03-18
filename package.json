@@ -1,8 +1,8 @@
 {
   "name": "nestjs-shopify",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "A NestJs Wrapper for shopify-api-node",
+  "author": "Edward Stephenson",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
