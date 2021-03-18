@@ -3,10 +3,10 @@ import { ShopifyModuleAsyncOptions, ShopifyModuleOptions } from './interfaces';
 import { ShopifyCoreModule } from './shopify.core.module';
 
 @Module({})
-export class ShopifyModule {
+export class NestJsShopifyModule {
   public static register(options: ShopifyModuleOptions): DynamicModule {
     return {
-      module: ShopifyModule,
+      module: NestJsShopifyModule,
       imports: [ShopifyCoreModule.register(options)],
       exports: [ShopifyCoreModule],
     };
@@ -16,7 +16,7 @@ export class ShopifyModule {
     options: ShopifyModuleAsyncOptions,
   ): DynamicModule {
     return {
-      module: ShopifyModule,
+      module: NestJsShopifyModule,
       imports: [ShopifyCoreModule.registerAsync(options)],
       exports: [ShopifyCoreModule],
     };

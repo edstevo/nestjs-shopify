@@ -15,7 +15,7 @@ import { SHOPIFY_MODULE_OPTIONS, SHOPIFY_SERVICE } from './constants';
 
 @Global()
 @Module({})
-export class ShopifyCoreModule {
+export class NestJsShopifyCoreModule {
   public static register(options: ShopifyModuleOptions): DynamicModule {
     const shopify = new Shopify(options);
 
@@ -25,7 +25,7 @@ export class ShopifyCoreModule {
     };
 
     return {
-      module: ShopifyCoreModule,
+      module: NestJsShopifyCoreModule,
       providers: [shopifyProvider],
       exports: [shopifyProvider],
     };
@@ -35,7 +35,7 @@ export class ShopifyCoreModule {
     options: ShopifyModuleAsyncOptions,
   ): DynamicModule {
     return {
-      module: ShopifyCoreModule,
+      module: NestJsShopifyCoreModule,
       imports: options.imports || [],
       providers: [
         ...this.createAsyncProviders(options),
